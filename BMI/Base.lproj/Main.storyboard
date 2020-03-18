@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,135 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index-body-mass-bmi-medical-600w-741320641" translatesAutoresizingMaskIntoConstraints="NO" id="jel-WN-Dw7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-Tp-bkk">
+                                <rect key="frame" x="30" y="60" width="315" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeG-Q0-h0C">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7M-9Y-ULU">
+                                        <rect key="frame" x="60" y="0.0" width="255" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="86G-iQ-9Am">
+                                <rect key="frame" x="30" y="124" width="315" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="體重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asX-Cn-Bvo">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-AV-KfJ">
+                                        <rect key="frame" x="60" y="0.0" width="255" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eAZ-vR-E0l">
+                                <rect key="frame" x="50" y="188" width="275" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDC-Jh-5uw">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="查詢">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Inquire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCF-Ak-bQl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-SC-8xe">
+                                <rect key="frame" x="30" y="278" width="315" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你的BMI數值：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tov-yE-Sra">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXz-20-qnj">
+                                        <rect key="frame" x="157.5" y="0.0" width="157.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lXz-20-qnj" firstAttribute="width" secondItem="Tov-yE-Sra" secondAttribute="width" id="fxh-Ms-xwG"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiA-KX-2JK">
+                                <rect key="frame" x="30" y="368.5" width="315" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="評論" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp9-Lo-buj">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jiA-KX-2JK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5K2-wD-wGz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="caJ-SC-8xe" secondAttribute="trailing" constant="30" id="6Dy-BO-Pga"/>
+                            <constraint firstItem="86G-iQ-9Am" firstAttribute="top" secondItem="fFf-Tp-bkk" secondAttribute="bottom" constant="30" id="8Mb-it-PWC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jiA-KX-2JK" secondAttribute="trailing" constant="30" id="Ajq-px-u58"/>
+                            <constraint firstItem="eAZ-vR-E0l" firstAttribute="top" secondItem="86G-iQ-9Am" secondAttribute="bottom" constant="30" id="Fev-RX-azQ"/>
+                            <constraint firstItem="jel-WN-Dw7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fmt-r1-u1j"/>
+                            <constraint firstItem="caJ-SC-8xe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Fsh-WB-b8W"/>
+                            <constraint firstItem="jel-WN-Dw7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jcw-4M-IZZ"/>
+                            <constraint firstItem="jel-WN-Dw7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K5H-bk-l4e"/>
+                            <constraint firstItem="86G-iQ-9Am" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="MAF-Yu-BKY"/>
+                            <constraint firstItem="eAZ-vR-E0l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MgO-au-XgM"/>
+                            <constraint firstItem="fFf-Tp-bkk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Qgf-ZO-bEy"/>
+                            <constraint firstItem="jel-WN-Dw7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Uo9-1z-fNN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86G-iQ-9Am" secondAttribute="trailing" constant="30" id="Upe-j8-SW8"/>
+                            <constraint firstItem="caJ-SC-8xe" firstAttribute="top" secondItem="eAZ-vR-E0l" secondAttribute="bottom" constant="60" id="bFu-AY-8wE"/>
+                            <constraint firstItem="fFf-Tp-bkk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="bac-0i-J53"/>
+                            <constraint firstItem="jiA-KX-2JK" firstAttribute="top" secondItem="caJ-SC-8xe" secondAttribute="bottom" constant="70" id="fxJ-BH-YiG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFf-Tp-bkk" secondAttribute="trailing" constant="30" id="l1n-Vu-lLO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eAZ-vR-E0l" secondAttribute="trailing" constant="50" id="opU-kt-08Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="BMIValue" destination="lXz-20-qnj" id="oRe-qD-2LH"/>
+                        <outlet property="comment" destination="Dp9-Lo-buj" id="okq-wI-8Y3"/>
+                        <outlet property="height" destination="a7M-9Y-ULU" id="ymf-pb-p9L"/>
+                        <outlet property="weight" destination="CbA-AV-KfJ" id="sZm-pJ-3lI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-415.19999999999999" y="65.217391304347828"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="index-body-mass-bmi-medical-600w-741320641" width="600" height="620"/>
+    </resources>
 </document>
